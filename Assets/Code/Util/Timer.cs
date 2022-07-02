@@ -22,6 +22,11 @@ public class Timer
 	{
 		curTime = 0.0f;
 	}
+	
+	public void Randomize()
+	{
+		curTime = Random.Range( 0.0f,maxTime );
+	}
 
 	public bool IsDone()
 	{
