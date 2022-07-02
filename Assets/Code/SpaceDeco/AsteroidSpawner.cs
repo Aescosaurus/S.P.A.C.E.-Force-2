@@ -10,7 +10,7 @@ public class AsteroidSpawner
 	void Start()
 	{
 		asteroidPrefab = Resources.Load<GameObject>(
-			"Prefabs/Asteroid" );
+			"Prefabs/SpaceDeco/Asteroid" );
 		Assert.IsNotNull( asteroidPrefab );
 
 		int tries = nBorderAsteroids;

@@ -10,8 +10,8 @@ public class StarSpawner
 	void Start()
 	{
 		starPrefab = Resources.Load<GameObject>(
-			"Prefabs/Star" );
-        mainMenuStarPrefab = Resources.Load<GameObject>("Prefabs/menuStar");
+			"Prefabs/SpaceDeco/Star" );
+        mainMenuStarPrefab = Resources.Load<GameObject>("Prefabs/SpaceDeco/menuStar");
 
 		for( int i = 0; i < nStars; ++i )
 		{
