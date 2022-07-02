@@ -55,6 +55,8 @@ public class PlayerWeapon
 		var bullBody = bull.GetComponent<Rigidbody2D>();
 		bullBody.AddForce( moveDir * bulletSpeed,
 			ForceMode2D.Impulse );
+
+		Destroy( bull,2.0f );
 	}
 
 	Quaternion CalcRot( Vector2 diff )
