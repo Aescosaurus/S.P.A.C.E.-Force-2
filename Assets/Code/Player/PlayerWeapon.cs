@@ -8,10 +8,10 @@ public class PlayerWeapon
 {
 	void Start()
 	{
-		body = GetComponent<Rigidbody2D>();
+		body = transform.parent.GetComponent<Rigidbody2D>();
 
-		gun1 = transform.Find( "Gun1" );
-		gun2 = transform.Find( "Gun2" );
+		gun1 = transform.parent.Find( "Gun1" );
+		gun2 = transform.parent.Find( "Gun2" );
 	}
 
 	void Update()
@@ -42,8 +42,7 @@ public class PlayerWeapon
 		Vector2 diff = mousePos - ( Vector2 )transform.position;
 		diff.Normalize();
 
-		transform.rotation = Quaternion.Euler( 0.0f,0.0f,
-			Mathf.Atan2( diff.y,diff.x ) * Mathf.Rad2Deg - 90.0f );
+		transform.parent.rotation = CalcRot( diff );
 
 		return( diff );
 	}
@@ -52,9 +51,15 @@ public class PlayerWeapon
 	{
 		var bull = Instantiate( bulletPrefab,
 			pos,Quaternion.identity );
+		bull.transform.rotation = CalcRot( moveDir );
 		var bullBody = bull.GetComponent<Rigidbody2D>();
 		bullBody.AddForce( moveDir * bulletSpeed,
 			ForceMode2D.Impulse );
+	}
+
+	Quaternion CalcRot( Vector2 diff )
+	{
+		return( Quaternion.Euler( 0.0f,0.0f,Mathf.Atan2( diff.y,diff.x ) * Mathf.Rad2Deg - 90.0f ) );
 	}
 
 	Rigidbody2D body;

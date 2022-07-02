@@ -170,7 +170,7 @@ PrefabInstance:
     - target: {fileID: 4470481862894864951, guid: 2ce59aa3827990a4a875b21e479b4fc0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4470481862894864951, guid: 2ce59aa3827990a4a875b21e479b4fc0,
         type: 3}
@@ -189,7 +189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ce59aa3827990a4a875b21e479b4fc0, type: 3}
---- !u!1001 &2069647910
+--- !u!1001 &621872830
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -199,7 +199,7 @@ PrefabInstance:
     - target: {fileID: 6754855736719713266, guid: b47a9ac31f602dd44b3cf15777d86daf,
         type: 3}
       propertyPath: m_Name
-      value: Emancipator
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6754855736719713265, guid: b47a9ac31f602dd44b3cf15777d86daf,
         type: 3}
@@ -239,7 +239,7 @@ PrefabInstance:
     - target: {fileID: 6754855736719713265, guid: b47a9ac31f602dd44b3cf15777d86daf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6754855736719713265, guid: b47a9ac31f602dd44b3cf15777d86daf,
         type: 3}
