@@ -51,11 +51,11 @@ public class Kitten
 		}
 	}
 
-    private void OnDestroy()
-    {
-        // healthBar = GetComponent<HealthBar>();
-        healthBar.DestroyHealthBar();
-    }
+    // private void OnDestroy()
+    // {
+    //     // healthBar = GetComponent<HealthBar>();
+    //     healthBar.DestroyHealthBar();
+    // }
 
     GameObject player = null;
 	Rigidbody2D body;

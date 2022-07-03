@@ -22,6 +22,11 @@ public class Timer
 	{
 		curTime = 0.0f;
 	}
+
+	public void SetDur( float newDuration )
+	{
+		maxTime = newDuration;
+	}
 	
 	public void Randomize()
 	{
