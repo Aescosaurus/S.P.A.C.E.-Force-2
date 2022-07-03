@@ -60,7 +60,7 @@ public class HealthBar
 
 	void OnDestroy()
 	{
-		Destroy( hpBar?.gameObject );
+		if( hpBar != null ) Destroy( hpBar?.gameObject );
 	}
 
 	public void Hurt( float damage )
