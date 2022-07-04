@@ -78,7 +78,7 @@ public class HealthBar
 			newScale.x = hpPercent;
 			greenBar.localScale = newScale;
 
-			greenBar.localPosition = Vector3.left * ( hpPercent / 2.0f );
+			greenBar.localPosition = Vector3.left * ( ( 1.0f - hpPercent ) / 2.0f );
 		}
 		// health -= damage;
 		// 
