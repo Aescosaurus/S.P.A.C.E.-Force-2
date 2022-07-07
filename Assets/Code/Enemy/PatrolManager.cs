@@ -27,6 +27,7 @@ public class PatrolManager
 	void Start()
 	{
 		self = this;
+		player = GameObject.FindGameObjectWithTag( "Player" );
 
 		patrolMask = LayerMask.GetMask( "Default" );
 
@@ -60,6 +61,16 @@ public class PatrolManager
 		var hit = Physics2D.Raycast( p1,diff,patrolRange,patrolMask );
 		
 		return( !hit );
+	}
+
+	public bool CheckConnectedPlayer( Vector2 pos )
+	{
+		return( CheckConnected( player.transform.position,pos ) );
+	}
+
+	public GameObject GetPlayer()
+	{
+		return( player );
 	}
 
 	// Generate path based on cur pos
@@ -103,6 +114,7 @@ public class PatrolManager
 	}
 
 	static PatrolManager self = null;
+	GameObject player;
 
 	LayerMask patrolMask;
 	List<PatrolPoint> points = new List<PatrolPoint>();

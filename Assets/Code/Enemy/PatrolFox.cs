@@ -21,8 +21,32 @@ public class PatrolFox
 
 			if( diff.sqrMagnitude < stopDist * stopDist ) TargetNextPoint();
 
+			// todo: lerp don't set vel so we can still have knockback
 			if( curPoint > -1 ) body.velocity = diff.normalized * moveSpd;
 			else body.velocity = Vector2.zero;
+		}
+		else if( target != null )
+		{
+			var diff = target.transform.position - transform.position;
+
+			body.velocity = diff.normalized * moveSpd;
+		}
+
+		if( playerCheck.Update( Time.deltaTime ) )
+		{
+			playerCheck.Reset();
+
+			if( PatrolManager.Get().CheckConnectedPlayer( transform.position ) )
+			{
+				curPoint = -1;
+				target = PatrolManager.Get().GetPlayer();
+			}
+			else if( target != null )
+			{
+				target = null;
+				body.velocity = Vector2.zero;
+				RegenPath();
+			}
 		}
 	}
 
@@ -71,4 +95,7 @@ public class PatrolFox
 	[SerializeField] float activateDelay = 0.1f;
 	[SerializeField] float moveSpd = 1.0f;
 	[SerializeField] float stopDist = 0.4f;
+
+	[SerializeField] Timer playerCheck = new Timer( 0.2f );
+	GameObject target = null;
 }
