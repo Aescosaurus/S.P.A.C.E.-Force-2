@@ -68,6 +68,7 @@ public class HealthBar
 		curHP -= damage;
 		if( curHP <= 0.0f )
 		{
+			PartHand.Get().SpawnParts( transform.position );
 			Destroy( gameObject );
 		}
 		else
