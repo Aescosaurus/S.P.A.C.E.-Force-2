@@ -33,9 +33,19 @@ public class Timer
 		curTime = Random.Range( 0.0f,maxTime );
 	}
 
+	public void Finish()
+	{
+		curTime = maxTime;
+	}
+
 	public bool IsDone()
 	{
 		return( curTime >= maxTime );
+	}
+
+	public float GetPercent()
+	{
+		return( Mathf.Min( curTime / maxTime,1.0f ) );
 	}
 
 	float curTime;
