@@ -17,6 +17,9 @@ public class HealthBar
 		UpdatePos();
 		greenBar = hpBar.Find( "HPBarGreen" );
 
+		hpBar.gameObject.SetActive( false );
+		greenBar.gameObject.SetActive( false );
+
 		// healthBarPrefab = Resources.Load<GameObject>(
 		// 	"Prefabs/HealthBarUI" );
 		// Assert.IsNotNull( healthBarPrefab );
@@ -73,6 +76,12 @@ public class HealthBar
 		}
 		else
 		{
+			if( damage > 0.0f )
+			{
+				hpBar.gameObject.SetActive( true );
+				greenBar.gameObject.SetActive( true );
+			}
+
 			var hpPercent = curHP / maxHP;
 
 			var newScale = greenBar.localScale;
