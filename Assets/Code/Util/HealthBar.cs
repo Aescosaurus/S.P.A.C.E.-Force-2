@@ -19,41 +19,6 @@ public class HealthBar
 
 		hpBar.gameObject.SetActive( false );
 		greenBar.gameObject.SetActive( false );
-
-		// healthBarPrefab = Resources.Load<GameObject>(
-		// 	"Prefabs/HealthBarUI" );
-		// Assert.IsNotNull( healthBarPrefab );
-
-		// float y = gameObject.name == "Fox Boss 1" ? gameObject.GetComponentInChildren<SpriteRenderer>().bounds.size.y * 96 : gameObject.GetComponentInChildren<SpriteRenderer>().bounds.size.y * 48;
-		// Vector3 sizeMultiplier = gameObject.name == "Fox Boss 1" ? new Vector3(2, 2, 2) : new Vector3(1, 1, 1);
-		// screenOffset = new Vector3(0, y, 0);
-		// totalHealth = health;
-		// canvas = GameObject.Find("Canvas");		
-		// Assert.IsNotNull( explodeSound );
-
-		// explosionPrefab = Resources.Load<GameObject>(
-		// 	"Prefabs/Explosion" );
-		// Assert.IsNotNull( explosionPrefab );
-		// 
-		// audSrc = GetComponent<AudioSource>();
-
-		//
-		// Health Bar
-		//
-		// if (gameObject.tag != "Player")
-		// {
-		// 	healthBar = Instantiate(healthBarPrefab, transform.position, Quaternion.identity, canvas.transform);
-		// 	images = healthBar.GetComponentsInChildren<Image>();
-		// 	foreach (Image img in images)
-		// 	{
-		// 		if (img.gameObject.tag == "HealthBarFill")
-		// 		{
-		// 			fillImage = img;
-		// 		}
-		// 	}
-		// 	fillImage.fillAmount = 1;
-		// 	healthBar.transform.localScale = sizeMultiplier;
-		// }
 	}
 
 	void LateUpdate()
@@ -72,7 +37,8 @@ public class HealthBar
 		if( curHP <= 0.0f )
 		{
 			PartHand.Get().SpawnParts( transform.position );
-			Destroy( gameObject );
+			if( tag == "Player" ) StartCoroutine( DestroyPlayer() );
+			else Destroy( gameObject );
 		}
 		else
 		{
@@ -90,33 +56,29 @@ public class HealthBar
 
 			greenBar.localPosition = Vector3.left * ( ( 1.0f - hpPercent ) / 2.0f );
 		}
-		// health -= damage;
-		// 
-		// if( audSrc != null && hurtSound != null )
-		// {
-		// 	audSrc.PlayOneShot( hurtSound,0.6f );
-		// }
-		// 
-		// if (gameObject.tag != "Player")
-		// {
-		// 	fillImage.fillAmount = ((float)health / (float)totalHealth);
-		// }
-		// 
-		// if ( health <= 0 )
-		// {
-		// 	var explosion = Instantiate( explosionPrefab );
-		// 	var clip = explosion.GetComponent<AudioSource>();
-		// 	clip.clip = explodeSound;
-		// 	clip.volume = 0.5f;
-		// 	clip.Play();
-		// 
-		// 	Destroy( gameObject );
-		// }
 	}
 
 	void UpdatePos()
 	{
 		hpBar.position = transform.position + Vector3.down * barOffset;
+	}
+
+	IEnumerator DestroyPlayer()
+	{
+		var wep = GetComponentInChildren<PlayerWeapon>();
+		wep.enabled = false;
+		var spr = GetComponentInChildren<SpriteRenderer>();
+		spr.enabled = false;
+
+		yield return( new WaitForSeconds( 1.0f ) );
+
+		wep.enabled = true;
+		spr.enabled = true;
+
+		curHP = maxHP;
+		hpBar.gameObject.SetActive( false );
+		greenBar.gameObject.SetActive( false );
+		GetComponent<PlayerCheckpoint>().ResetToLastCheckpoint();
 	}
 
 	public float GetHealth()
