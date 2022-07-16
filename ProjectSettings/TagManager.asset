@@ -11,6 +11,7 @@ TagManager:
   - FoxBullet
   - HealthBarFill
   - Patrol
+  - Breakable
   layers:
   - Default
   - TransparentFX

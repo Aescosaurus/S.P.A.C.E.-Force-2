@@ -59,7 +59,7 @@ public class PatrolFox
 	void RegenPath()
 	{
 		curPath = PatrolManager.Get().GeneratePatrolPath( transform.position );
-		curPoint = 0;
+		if( curPath != null ) curPoint = 0;
 	}
 
 	void TargetNextPoint()

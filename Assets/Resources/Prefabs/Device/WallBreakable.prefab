@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 6193173112991740363}
   m_Layer: 10
   m_Name: WallBreakable
-  m_TagString: SpaceFox
+  m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
