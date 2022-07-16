@@ -26,6 +26,8 @@ public class Key
 		{
 			following = true;
 			followTarget = coll.gameObject;
+			coll.GetComponent<PlayerHeldItems>().PickupKey( gameObject );
+			GetComponent<ParticleSystem>().Emit( 10 );
 		}
 	}
 
