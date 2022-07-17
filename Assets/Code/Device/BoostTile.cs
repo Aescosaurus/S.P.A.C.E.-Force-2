@@ -13,10 +13,14 @@ public class BoostTile
 			var playerBody = coll.GetComponent<Rigidbody2D>();
 			playerBody.velocity *= velTamper;
 			playerBody.AddForce( transform.up * pushForce,ForceMode2D.Impulse );
-			// todo: particle trail and/or actual trail on player
+			
+			var trail = Instantiate( trailPrefab,coll.transform );
+			Destroy( trail,1.2f );
 		}
 	}
 
 	[SerializeField] float pushForce = 2.0f;
 	[SerializeField] float velTamper = 0.7f;
+
+	[SerializeField] GameObject trailPrefab = null;
 }

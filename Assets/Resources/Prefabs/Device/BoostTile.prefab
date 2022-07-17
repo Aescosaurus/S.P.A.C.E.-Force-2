@@ -153,3 +153,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushForce: 17
   velTamper: 0.7
+  trailPrefab: {fileID: 3901396638538058241, guid: bfd2aa7934f971348bb400ccfb4e0c9c,
+    type: 3}
