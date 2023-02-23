@@ -1,2 +1,16 @@
 Color palette: FullOfJoy20 Palette https://lospec.com/palette-list/fullofjoy20
 
+weapons
+	railgun - slow fire rate, huge knockback, spins player a bit after shooting? piercing?
+
+abilities - spacebar/right click to activate?
+	rear shield - blocks damage from behind for a limited time
+
+boss ideas
+	fox snake with multiple segments
+	long fox ship with wings & 2 foxes inside that moves horizontally & shoots bullets up & down
+	2d fox face that charges & has directional attacks
+
+
+
+space force 3 - 3d fps, slime like fox heads that hop around
