@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // movement mostly copied from PatrolFox
-public class Boss1AI
+public class Boss1Move
 	:
 	EnemyBoss
 {

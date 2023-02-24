@@ -19,7 +19,7 @@ public class BossZoom
 		if( coll.tag == "Player" )
 		{
 			camFocusScr.SetBuffSize( zoomAmount );
-			myBoss.ToggleActivate( true );
+			if( myBoss != null ) myBoss.ToggleActivate( true );
 		}
 	}
 
@@ -28,7 +28,7 @@ public class BossZoom
 		if( coll.tag == "Player" )
 		{
 			camFocusScr.SetBuffSize( 0.0f );
-			myBoss.ToggleActivate( false );
+			if( myBoss != null ) myBoss.ToggleActivate( false );
 		}
 	}
 	

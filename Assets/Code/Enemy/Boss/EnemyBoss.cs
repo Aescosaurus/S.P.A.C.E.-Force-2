@@ -11,5 +11,10 @@ public class EnemyBoss
 		activated = active;
 	}
 
+	public bool GetActivated()
+	{
+		return( activated );
+	}
+
 	protected bool activated = false;
 }
