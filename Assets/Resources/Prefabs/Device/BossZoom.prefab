@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7153388074739538236}
   - component: {fileID: 6326670391893520402}
   - component: {fileID: 1607614416485721152}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BossZoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5077057852387469778}
   - component: {fileID: 4199097394218935969}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BossZoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
