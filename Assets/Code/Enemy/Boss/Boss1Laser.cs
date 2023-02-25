@@ -9,6 +9,8 @@ public class Boss1Laser
 	void Start()
 	{
 		shotLoc = transform.Find( "ShotLoc" );
+
+		anim = GetComponent<Animator>();
 	}
 
 	public void AimAt( Vector2 target )
@@ -41,9 +43,12 @@ public class Boss1Laser
 				Mathf.Atan2( forceVec.y,forceVec.x ) * Mathf.Rad2Deg + 180.0f );
 			curBullet.GetComponent<Rigidbody2D>().AddForce( forceVec * bulletSpd,ForceMode2D.Impulse );
 		}
+
+		anim.Play( "Boss1LaserAnim",-1,0.0f );
 	}
 
 	Transform shotLoc;
+	Animator anim;
 
 	[SerializeField] GameObject bulletPrefab = null;
 	[SerializeField] float bulletSpread = 10.0f;

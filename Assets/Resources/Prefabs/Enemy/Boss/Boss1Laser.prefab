@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 7794156023673341635}
   - component: {fileID: 8452219017047631820}
   - component: {fileID: 7999411319238741683}
+  - component: {fileID: 8337145169778607830}
   m_Layer: 10
   m_Name: Boss1Laser
   m_TagString: SpaceFox
@@ -171,6 +172,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 20
   barOffset: 1
+--- !u!95 &8337145169778607830
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8760265433575410663}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1952a974c8806d54cbf1d6a62a5711a5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8765658572564365623
 GameObject:
   m_ObjectHideFlags: 0

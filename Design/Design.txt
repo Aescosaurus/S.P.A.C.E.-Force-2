@@ -15,17 +15,7 @@ boss ideas
 
 different backgrounds & deco for each area
 
-level1 boss
-	goes left/right above you, raining down bullets onto breakable walls
-	phases
-		--alternate shotguns from each gun
-		--spam rain of bullets straight down
-		--both guns fire simultaneously aiming at player
-			guns expand & shrink a bit when firing
-				spawn particles also?
-	--guns can each be destroyed independently
-	boss float animation
-	--make enemy bullets able to collide with breakable walls
+
 
 
 space force 3 - 3d fps, slime like fox heads that hop around
