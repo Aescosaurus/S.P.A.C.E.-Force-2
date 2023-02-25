@@ -5,6 +5,8 @@ weapons
 
 abilities - spacebar/right click to activate?
 	rear shield - blocks damage from behind for a limited time
+	dash a short distance ignoring enemies & damage
+		show in tutorial with flames in the way so you have to dash over them
 
 boss ideas
 	giant boss hp bar on top of screen?
@@ -14,6 +16,11 @@ boss ideas
 	2d fox face that charges & has directional attacks
 
 different backgrounds & deco for each area
+
+timed hazards/traps
+	flame pillars using particles
+	squishers like minecraft pistons
+	something like crystal hopper jumpers where if you get close enough they dash towards you & explode
 
 
 

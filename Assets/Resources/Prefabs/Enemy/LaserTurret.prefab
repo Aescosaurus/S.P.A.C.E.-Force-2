@@ -268,7 +268,7 @@ MonoBehaviour:
   barrageRefire:
     maxTime: 2
   refire:
-    maxTime: 1.2
+    maxTime: 1.3
   barrageSize: 3
   activateDist: 5.5
   rotSpd: 16
