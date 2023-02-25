@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 20
   barOffset: 1
+  barScale: {x: 1, y: 1.25}
 --- !u!95 &8337145169778607830
 Animator:
   serializedVersion: 3

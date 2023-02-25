@@ -8,7 +8,7 @@ abilities - spacebar/right click to activate?
 
 boss ideas
 	giant boss hp bar on top of screen?
-		or just a way to make boss hp bars bigger in settings
+		--or just a way to make boss hp bars bigger in settings
 	fox snake with multiple segments
 	long fox ship with wings & 2 foxes inside that moves horizontally & shoots bullets up & down
 	2d fox face that charges & has directional attacks

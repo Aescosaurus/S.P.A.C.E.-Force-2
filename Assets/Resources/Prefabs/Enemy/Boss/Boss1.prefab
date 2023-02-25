@@ -143,7 +143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 30
-  barOffset: 1.5
+  barOffset: 1.75
+  barScale: {x: 2, y: 1.5}
 --- !u!1 &6660180057195465226
 GameObject:
   m_ObjectHideFlags: 0

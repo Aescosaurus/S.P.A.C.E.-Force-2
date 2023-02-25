@@ -19,6 +19,8 @@ public class HealthBar
 
 		hpBar.gameObject.SetActive( false );
 		greenBar.gameObject.SetActive( false );
+
+		hpBar.transform.localScale = barScale;
 	}
 
 	void LateUpdate()
@@ -93,4 +95,6 @@ public class HealthBar
 	float curHP;
 	
 	[SerializeField] float barOffset = 0.6f;
+
+	[SerializeField] Vector2 barScale = new Vector2( 1.0f,1.0f );
 }
