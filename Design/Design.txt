@@ -14,6 +14,8 @@ boss ideas
 	fox snake with multiple segments
 	long fox ship with wings & 2 foxes inside that moves horizontally & shoots bullets up & down
 	2d fox face that charges & has directional attacks
+	boss with a sword/sword made of bullets/2 swords for slashing
+		use ability to deal with them - dash to jump over or shield to block
 
 different backgrounds & deco for each area
 
@@ -21,6 +23,15 @@ timed hazards/traps
 	flame pillars using particles
 	squishers like minecraft pistons
 	something like crystal hopper jumpers where if you get close enough they dash towards you & explode
+
+
+
+todo: add abilities, aim for mvp
+	extend level 1 to make it test your dodging more before the boss
+	big arena room with enemies & keys scattered about
+		/enemies try to strafe you while staying within min-max range of you & firing
+			--shoots 2 shots to each side of you
+		levels teach you how to deal with boss - area 1 bullet dodging, area 2 hazards for sword boss
 
 
 

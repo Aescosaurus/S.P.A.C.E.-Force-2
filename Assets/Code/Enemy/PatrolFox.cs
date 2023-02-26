@@ -6,14 +6,14 @@ public class PatrolFox
 	:
 	MonoBehaviour
 {
-	void Start()
+	protected virtual void Start()
 	{
 		body = GetComponent<Rigidbody2D>();
 
 		StartCoroutine( WaitRegenPath() );
 	}
 
-	void Update()
+	protected virtual void Update()
 	{
 		if( curPoint > -1 )
 		{
@@ -22,14 +22,14 @@ public class PatrolFox
 			if( diff.sqrMagnitude < stopDist * stopDist ) TargetNextPoint();
 
 			// todo: lerp don't set vel so we can still have knockback
-			if( curPoint > -1 ) body.velocity = diff.normalized * moveSpd;
-			else body.velocity = Vector2.zero;
+			if( curPoint > -1 ) UpdateVel( diff.normalized * moveSpd );
+			else UpdateVel( Vector2.zero );
 		}
 		else if( target != null )
 		{
 			var diff = target.transform.position - transform.position;
 
-			body.velocity = diff.normalized * moveSpd;
+			UpdateVel( diff.normalized * moveSpd );
 		}
 
 		if( playerCheck.Update( Time.deltaTime ) )
@@ -40,11 +40,12 @@ public class PatrolFox
 			{
 				curPoint = -1;
 				target = PatrolManager.Get().GetPlayer();
+				target = PatrolManager.Get().GetPlayer();
 			}
 			else if( target != null )
 			{
 				target = null;
-				body.velocity = Vector2.zero;
+				UpdateVel( Vector2.zero );
 				RegenPath();
 			}
 		}
@@ -84,6 +85,18 @@ public class PatrolFox
 	void OnCollisionEnter2D( Collision2D coll )
 	{
 		// RegenPath();
+	}
+
+	void UpdateVel( Vector2 newVel )
+	{
+		body.velocity = newVel;
+
+		if( Mathf.Abs( newVel.x ) > 0.0f )
+		{
+			var newScale = transform.localScale;
+			newScale.x = Mathf.Sign( newVel.x );
+			transform.localScale = newScale;
+		}
 	}
 
 	Rigidbody2D body;
