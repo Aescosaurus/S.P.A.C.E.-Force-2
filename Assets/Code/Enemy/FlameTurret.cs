@@ -65,10 +65,16 @@ public class FlameTurret
 		}
 	}
 
+	void OnTriggerEnter2D( Collider2D coll )
+	{
+		if( coll.tag == "Player" ) coll.GetComponent<HealthBar>().Hurt( 1.0f );
+	}
+
 	ParticleSystem partSys;
 	BoxCollider2D coll;
 	Animator animCtrl;
 
+	[Tooltip( "Set to 0 for infinite" )]
 	[SerializeField] Timer refire = new Timer( 3.0f );
 	[SerializeField] Timer flameDur = new Timer( 3.0f );
 

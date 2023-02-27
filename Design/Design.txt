@@ -3,7 +3,7 @@ Color palette: FullOfJoy20 Palette https://lospec.com/palette-list/fullofjoy20
 weapons
 	railgun - slow fire rate, huge knockback, spins player a bit after shooting? piercing?
 
-abilities - spacebar/right click to activate?
+abilities - spacebar/right click to activate
 	rear shield - blocks damage from behind for a limited time
 	dash a short distance ignoring enemies & damage
 		show in tutorial with flames in the way so you have to dash over them
@@ -20,19 +20,22 @@ boss ideas
 different backgrounds & deco for each area
 
 timed hazards/traps
-	flame pillars using particles
+	--flame pillars using particles
 	squishers like minecraft pistons
 	something like crystal hopper jumpers where if you get close enough they dash towards you & explode
 
 
 some level with spinning wheel with turrets attached to it
 
+upgrades: menu in between levels to equip diff abilities & weps
+	weps & abilities go into their own slots inside player for easier management
+	different ship types with different sprites, hitboxes, weight (affects knockback) & gun spots
 
 todo: add abilities, aim for mvp
 	extend level 1 to make it test your dodging more before the boss
-	big arena room with enemies & keys scattered about
-		/enemies try to strafe you while staying within min-max range of you & firing
-			--shoots 2 shots to each side of you
+		big arena room with enemies & keys scattered about
+			/enemies try to strafe you while staying within min-max range of you & firing
+				--shoots 2 shots to each side of you
 		levels teach you how to deal with boss - area 1 bullet dodging, area 2 hazards for sword boss
 
 

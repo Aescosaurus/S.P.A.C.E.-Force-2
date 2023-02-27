@@ -23,7 +23,7 @@ public class EmancipatorBullet
 	{
 		if( coll.gameObject.tag == "SpaceFox" || coll.gameObject.tag == "Breakable" )
 		{
-			coll.gameObject.GetComponent<HealthBar>().Hurt( 1 );
+			coll.gameObject.GetComponent<HealthBar>()?.Hurt( 1 );
 		}
 		Destroy( gameObject );
 	}
