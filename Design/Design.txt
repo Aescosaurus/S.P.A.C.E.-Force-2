@@ -25,6 +25,8 @@ timed hazards/traps
 	something like crystal hopper jumpers where if you get close enough they dash towards you & explode
 
 
+some level with spinning wheel with turrets attached to it
+
 
 todo: add abilities, aim for mvp
 	extend level 1 to make it test your dodging more before the boss

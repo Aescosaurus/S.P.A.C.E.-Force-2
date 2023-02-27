@@ -48,6 +48,11 @@ public class Timer
 		return( Mathf.Min( curTime / maxTime,1.0f ) );
 	}
 
+	public float GetDur()
+	{
+		return( maxTime );
+	}
+
 	float curTime;
 	[SerializeField] float maxTime;
 }
