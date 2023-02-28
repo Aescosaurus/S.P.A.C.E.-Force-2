@@ -129,7 +129,7 @@ MonoBehaviour:
   stopDist: 0.4
   playerCheck:
     maxTime: 0.2
-  attackRange: 10
+  attackRange: 8
   refire:
     maxTime: 3
   bulletSpread: 20

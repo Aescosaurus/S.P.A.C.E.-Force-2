@@ -7,6 +7,8 @@ abilities - spacebar/right click to activate
 	rear shield - blocks damage from behind for a limited time
 	dash a short distance ignoring enemies & damage
 		show in tutorial with flames in the way so you have to dash over them
+	lock momentum for a short time/while held (no knockback from weps)
+		cooldown as mana bar? like ability takes mana & regen represents cooldown
 
 boss ideas
 	giant boss hp bar on top of screen?
@@ -32,13 +34,10 @@ upgrades: menu in between levels to equip diff abilities & weps
 	different ship types with different sprites, hitboxes, weight (affects knockback) & gun spots
 
 todo: add abilities, aim for mvp
-	extend level 1 to make it test your dodging more before the boss
-		big arena room with enemies & keys scattered about
-			/enemies try to strafe you while staying within min-max range of you & firing
-				--shoots 2 shots to each side of you
-		levels teach you how to deal with boss - area 1 bullet dodging, area 2 hazards for sword boss
+levels teach you how to deal with boss - area 1 bullet dodging, area 2 hazards for sword boss
+	start of level 2 has flame barrier to make sure you have an ability that will let you beat the level
 
-
+todo: diff particles for key being used up - burst key color particles?
 
 
 space force 3 - 3d fps, slime like fox heads that hop around
