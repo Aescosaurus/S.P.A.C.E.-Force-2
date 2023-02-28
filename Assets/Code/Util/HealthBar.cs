@@ -71,11 +71,14 @@ public class HealthBar
 		wep.enabled = false;
 		var spr = GetComponentInChildren<SpriteRenderer>();
 		spr.enabled = false;
+		var coll = GetComponentInChildren<Collider2D>();
+		coll.enabled = false;
 
 		yield return( new WaitForSeconds( 1.0f ) );
 
 		wep.enabled = true;
 		spr.enabled = true;
+		coll.enabled = true;
 
 		curHP = maxHP;
 		hpBar.gameObject.SetActive( false );
