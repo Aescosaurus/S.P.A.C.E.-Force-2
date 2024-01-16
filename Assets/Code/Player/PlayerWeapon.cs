@@ -16,8 +16,17 @@ public class PlayerWeapon
 
 	void Update()
 	{
-		if( refire.Update( Time.deltaTime ) &&
-			Input.GetAxis( "Attack" ) > 0.0f )
+		bool attacking = Input.GetAxis( "Attack" ) > 0.0f;
+
+		if( canAttackToggle && Input.GetAxis( "AttackToggle" ) > 0 )
+		{
+			attackToggle = !attackToggle;
+		}
+		canAttackToggle = !( Input.GetAxis( "AttackToggle" ) > 0 );
+
+		if( attackToggle ) attacking = true;
+
+		if( refire.Update( Time.deltaTime ) && attacking )
 		{
 			refire.Reset();
 
@@ -75,4 +84,7 @@ public class PlayerWeapon
 	[SerializeField] float pushForce = 1.0f;
 
 	int curGun = 0;
+
+	bool canAttackToggle = true;
+	bool attackToggle = false;
 }

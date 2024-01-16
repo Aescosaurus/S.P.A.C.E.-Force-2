@@ -1,12 +1,14 @@
 Color palette: FullOfJoy20 Palette https://lospec.com/palette-list/fullofjoy20
 
 weapons
+	regular fast fire rate pew pew style gun
 	railgun - slow fire rate, huge knockback, spins player a bit after shooting? piercing?
+	jackhammer - short range, high dmg, high knockback
 
 abilities - spacebar/right click to activate
 	rear shield - blocks damage from behind for a limited time
-	dash a short distance ignoring enemies & damage
-		show in tutorial with flames in the way so you have to dash over them
+	--dash a short distance ignoring enemies & damage
+		--show in tutorial with flames in the way so you have to dash over them
 	lock momentum for a short time/while held (no knockback from weps)
 		cooldown as mana bar? like ability takes mana & regen represents cooldown
 
@@ -19,11 +21,11 @@ boss ideas
 	boss with a sword/sword made of bullets/2 swords for slashing
 		use ability to deal with them - dash to jump over or shield to block
 
-different backgrounds & deco for each area
+different backgrounds & deco for each area - stars, nebulas, etc
 
 timed hazards/traps
 	--flame pillars using particles
-	squishers like minecraft pistons
+	squishers like minecraft pistons that turn on/off periodically
 	something like crystal hopper jumpers where if you get close enough they dash towards you & explode
 
 
@@ -36,6 +38,7 @@ upgrades: menu in between levels to equip diff abilities & weps
 todo: add abilities, aim for mvp
 levels teach you how to deal with boss - area 1 bullet dodging, area 2 hazards for sword boss
 	start of level 2 has flame barrier to make sure you have an ability that will let you beat the level
+	small fox ship with giant sword
 
 todo: diff particles for key being used up - burst key color particles?
 
