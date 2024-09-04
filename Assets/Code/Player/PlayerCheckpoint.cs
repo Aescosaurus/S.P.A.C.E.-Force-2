@@ -13,6 +13,9 @@ public class PlayerCheckpoint
 		{
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 			transform.position = lastCheckpoint.transform.position;
+
+			if( myAbility == null ) myAbility = GetComponentInChildren<PlayerAbility>();
+			myAbility.FinishCooldown();
 		}
 		else
 		{
@@ -25,6 +28,8 @@ public class PlayerCheckpoint
 		lastCheckpoint?.ToggleActive( false );
 		lastCheckpoint = point;
 	}
+
+	PlayerAbility myAbility = null;
 
 	Checkpoint lastCheckpoint = null;
 }

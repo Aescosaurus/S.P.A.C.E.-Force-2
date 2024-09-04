@@ -25,5 +25,10 @@ public abstract class PlayerAbility
 
 	protected abstract void ActivateAbility();
 
+	public void FinishCooldown()
+	{
+		cooldown.Finish();
+	}
+
 	[SerializeField] Timer cooldown = new Timer( 5.0f );
 }

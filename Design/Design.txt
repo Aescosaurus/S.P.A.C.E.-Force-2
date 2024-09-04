@@ -40,7 +40,16 @@ levels teach you how to deal with boss - area 1 bullet dodging, area 2 hazards f
 	start of level 2 has flame barrier to make sure you have an ability that will let you beat the level
 	small fox ship with giant sword
 
+
+level ideas
+	asteroid level with comets flying about that you have to dodge
+	level with focus on movement based abilities
+		springs placed on walls that zoom you in a certain direction
+		those zoom floors from level 1
+		walls that take a certain amount of speed to break
+
 todo: diff particles for key being used up - burst key color particles?
+	particles when bullet hits wall
 
 
 space force 3 - 3d fps, slime like fox heads that hop around
