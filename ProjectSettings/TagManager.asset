@@ -12,6 +12,7 @@ TagManager:
   - HealthBarFill
   - Patrol
   - Breakable
+  - Crystal
   layers:
   - Default
   - TransparentFX

@@ -25,10 +25,10 @@ different backgrounds & deco for each area - stars, nebulas, etc
 
 timed hazards/traps
 	--flame pillars using particles
-	squishers like minecraft pistons that turn on/off periodically
-		has collider reaching out a bit from top, if it collides with wall it enables kill collider
+	--squishers like minecraft pistons that turn on/off periodically
 	something like crystal hopper jumpers where if you get close enough they dash towards you & explode
 		little alien squid things
+		these for asteroid level
 
 
 
@@ -43,6 +43,9 @@ levels teach you how to deal with boss - area 1 bullet dodging, area 2 hazards f
 
 puzzle ideas
 	crystals that change between 2-3 diff colors that activate/deactivate walls of matching color when hit
+		do we have to introduce these in a more understandable way before level 2?
+		these slowly bob up & down periodically
+		crystal changer flashes white when hit - overlay white silhouette of crystal & decrease opacity over time
 
 
 level ideas
@@ -61,6 +64,8 @@ level ideas
 todo: diff particles for key being used up - burst key color particles?
 	particles when bullet hits wall
 		they shoot out in narrow cone at opposite angle of bullet
+	breakable wall destroy particles
+		maybe some particles when you boop against but can't break?
 
 add wasd controls
 	maybe these should be reversed too
