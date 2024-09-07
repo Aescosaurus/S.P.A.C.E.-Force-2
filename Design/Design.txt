@@ -43,8 +43,7 @@ levels teach you how to deal with boss - area 1 bullet dodging, area 2 hazards f
 
 puzzle ideas
 	crystals that change between 2-3 diff colors that activate/deactivate walls of matching color when hit
-		do we have to introduce these in a more understandable way before level 2?
-		these slowly bob up & down periodically
+		--these slowly bob up & down periodically
 		crystal changer flashes white when hit - overlay white silhouette of crystal & decrease opacity over time
 
 
