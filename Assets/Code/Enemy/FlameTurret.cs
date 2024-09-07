@@ -10,7 +10,11 @@ public class FlameTurret
 	void Start()
 	{
 		partSys = GetComponentInChildren<ParticleSystem>();
-		coll = GetComponent<BoxCollider2D>();
+		var colls = GetComponents<BoxCollider2D>();
+		foreach( var coll in colls )
+		{
+			if( coll.isTrigger ) damageHitbox = coll;
+		}
 		animCtrl = GetComponentInChildren<Animator>();
 
 		if( refire.GetDur() > 0.0f ) animSpd = 1.0f / refire.GetDur();
@@ -52,7 +56,7 @@ public class FlameTurret
 
 	void ToggleEnabled( bool enabled )
 	{
-		coll.enabled = enabled;
+		damageHitbox.enabled = enabled;
 
 		if( enabled )
 		{
@@ -65,13 +69,13 @@ public class FlameTurret
 		}
 	}
 
-	void OnTriggerEnter2D( Collider2D coll )
+	void OnTriggerEnter2D( Collider2D damageHitbox )
 	{
-		if( coll.tag == "Player" ) coll.GetComponent<HealthBar>().Hurt( 1.0f );
+		if( damageHitbox.tag == "Player" ) damageHitbox.GetComponent<HealthBar>().Hurt( 1.0f );
 	}
 
 	ParticleSystem partSys;
-	BoxCollider2D coll;
+	BoxCollider2D damageHitbox;
 	Animator animCtrl;
 
 	[Tooltip( "Set to 0 for infinite" )]
