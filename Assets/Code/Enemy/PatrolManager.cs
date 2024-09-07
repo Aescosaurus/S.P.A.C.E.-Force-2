@@ -32,10 +32,7 @@ public class PatrolManager
 		patrolMask = LayerMask.GetMask( "Default" );
 
 		var patrolPoints = GameObject.FindGameObjectsWithTag( "Patrol" );
-		foreach( var point in patrolPoints )
-		{
-			points.Add( new PatrolPoint( point ) );
-		}
+		foreach( var point in patrolPoints ) points.Add( new PatrolPoint( point ) );
 
 		for( int i = 0; i < points.Count; ++i )
 		{
@@ -58,8 +55,9 @@ public class PatrolManager
 		var diff = p2 - p1;
 		if( diff.sqrMagnitude > patrolRange * patrolRange ) return( false );
 
-		var hit = Physics2D.Raycast( p1,diff,patrolRange,patrolMask );
-		
+		// use min here so we don't overshoot the other point
+		var hit = Physics2D.Raycast( p1,diff,Mathf.Min( patrolRange,diff.magnitude ),patrolMask );
+
 		return( !hit );
 	}
 

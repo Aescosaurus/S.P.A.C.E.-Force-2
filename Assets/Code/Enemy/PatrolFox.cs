@@ -40,7 +40,6 @@ public class PatrolFox
 			{
 				curPoint = -1;
 				target = PatrolManager.Get().GetPlayer();
-				target = PatrolManager.Get().GetPlayer();
 			}
 			else if( target != null )
 			{
