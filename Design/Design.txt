@@ -26,10 +26,11 @@ different backgrounds & deco for each area - stars, nebulas, etc
 timed hazards/traps
 	--flame pillars using particles
 	squishers like minecraft pistons that turn on/off periodically
+		has collider reaching out a bit from top, if it collides with wall it enables kill collider
 	something like crystal hopper jumpers where if you get close enough they dash towards you & explode
+		little alien squid things
 
 
-some level with spinning wheel with turrets attached to it
 
 upgrades: menu in between levels to equip diff abilities & weps
 	weps & abilities go into their own slots inside player for easier management
@@ -40,16 +41,28 @@ levels teach you how to deal with boss - area 1 bullet dodging, area 2 hazards f
 	start of level 2 has flame barrier to make sure you have an ability that will let you beat the level
 	small fox ship with giant sword
 
+puzzle ideas
+	crystals that change between 2-3 diff colors that activate/deactivate walls of matching color when hit
+
 
 level ideas
 	asteroid level with comets flying about that you have to dodge
-	level with focus on movement based abilities
+	level with focus on movement based abilities - interstellar highway
 		springs placed on walls that zoom you in a certain direction
+			maybe: timed repulsors that go 3 2 1 boing? & repulse you based on angle (just use diff vec)
 		those zoom floors from level 1
 		walls that take a certain amount of speed to break
+			need to break walls from a diff direction, or use key to unlock path from other way
+				to get enough momentum to break something past it
+	trap level - bastion
+		spinning wheel with turrets attached to it
+		pew pew laser beams from space tether
 
 todo: diff particles for key being used up - burst key color particles?
 	particles when bullet hits wall
+		they shoot out in narrow cone at opposite angle of bullet
 
+add wasd controls
+	maybe these should be reversed too
 
 space force 3 - 3d fps, slime like fox heads that hop around
