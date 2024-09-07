@@ -30,6 +30,8 @@ public class CrystalShard
 		
 		coll.enabled = !colorMatch;
 		sprRend.sprite = ( colorMatch ? hollowSprs : shardSprs )[( int )myColor];
+
+		Instantiate( shardFlashPrefab,sprRend.transform );
 	}
 
 	SpriteRenderer sprRend;
@@ -39,4 +41,6 @@ public class CrystalShard
 	[SerializeField] List<Sprite> hollowSprs = new List<Sprite>();
 	[SerializeField] public int crystalId = 1;
 	[SerializeField] ShardColor myColor = ShardColor.Blue;
+	
+	[SerializeField] GameObject shardFlashPrefab = null;
 }

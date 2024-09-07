@@ -82,6 +82,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 897395a1b1238134aae64428587eba86, type: 3}
   crystalId: 1
   myColor: 0
+  shardFlashPrefab: {fileID: 7610921931543336505, guid: 385f48383a9484b419773edc0d47cc2d,
+    type: 3}
 --- !u!1 &7356172735243603316
 GameObject:
   m_ObjectHideFlags: 0

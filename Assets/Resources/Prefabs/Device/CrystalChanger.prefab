@@ -164,3 +164,5 @@ MonoBehaviour:
   crystalId: 1
   colorEnabled: 010101
   startColor: 0
+  changerFlashPrefab: {fileID: 7594537600434180093, guid: 6a67e4d9fd2952f49a18fea08b592557,
+    type: 3}

@@ -39,6 +39,8 @@ public class CrystalChanger
 	{
 		if( coll.gameObject.tag == "Bullet" )
 		{
+			Instantiate( changerFlashPrefab,sprRend.transform );
+
 			if( --hp <= 0 )
 			{
 				NextColor();
@@ -87,4 +89,6 @@ public class CrystalChanger
 
 	[SerializeField] CrystalShard.ShardColor startColor = CrystalShard.ShardColor.Blue;
 	CrystalShard.ShardColor curColor;
+
+	[SerializeField] GameObject changerFlashPrefab = null;
 }
