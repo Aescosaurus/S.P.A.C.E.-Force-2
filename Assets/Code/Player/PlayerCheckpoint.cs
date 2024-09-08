@@ -15,7 +15,7 @@ public class PlayerCheckpoint
 			transform.position = lastCheckpoint.transform.position;
 
 			if( myAbility == null ) myAbility = GetComponentInChildren<PlayerAbility>();
-			myAbility.FinishCooldown();
+			myAbility?.FinishCooldown();
 		}
 		else
 		{

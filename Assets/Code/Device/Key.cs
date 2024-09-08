@@ -6,6 +6,12 @@ public class Key
 	:
 	MonoBehaviour
 {
+	void Start()
+	{
+		moveThresh = moveThreshRange.Rand();
+		lerpAmount = lerpRange.Rand();
+	}
+
 	void Update()
 	{
 		if( following )
@@ -34,6 +40,10 @@ public class Key
 	bool following = false;
 	GameObject followTarget = null;
 
-	[SerializeField] float moveThresh = 1.2f;
-	[SerializeField] float lerpAmount = 0.3f;
+	// [SerializeField] float moveThresh = 1.2f;
+	[SerializeField] RangeF moveThreshRange = new RangeF( 0.8f,1.6f );
+	float moveThresh;
+	// [SerializeField] float lerpAmount = 0.3f;
+	float lerpAmount;
+	[SerializeField] RangeF lerpRange = new RangeF( 0.2f,0.6f );
 }

@@ -41,11 +41,6 @@ levels teach you how to deal with boss - area 1 bullet dodging, area 2 hazards f
 	start of level 2 has flame barrier to make sure you have an ability that will let you beat the level
 	small fox ship with giant sword
 
-puzzle ideas
-	crystals that change between 2-3 diff colors that activate/deactivate walls of matching color when hit
-		--these slowly bob up & down periodically
-		crystal changer flashes white when hit - overlay white silhouette of crystal & decrease opacity over time
-
 
 level ideas
 	asteroid level with comets flying about that you have to dodge
