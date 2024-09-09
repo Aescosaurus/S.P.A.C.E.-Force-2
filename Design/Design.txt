@@ -48,9 +48,15 @@ level ideas
 		springs placed on walls that zoom you in a certain direction
 			maybe: timed repulsors that go 3 2 1 boing? & repulse you based on angle (just use diff vec)
 		those zoom floors from level 1
-		walls that take a certain amount of speed to break
-			need to break walls from a diff direction, or use key to unlock path from other way
-				to get enough momentum to break something past it
+		--walls that take a certain amount of speed to break
+		spiky crystals in crystal area that shoot out as soon as you cross their line of sight
+			shoot line of particles showing where they're gonna go a split second before firing?
+			room filled with space chickens & spiky crystals
+				maybe chicken at start activates when you get near it, & triggers spiky crystal
+				boost tile that just sends you into a bunch of spiky crystals
+		level 2 boss ideas
+			shoots warning particles then dashes in your direction a few times
+			incorporate flamethrowers somehow
 	trap level - bastion
 		spinning wheel with turrets attached to it
 		pew pew laser beams from space tether
@@ -63,5 +69,7 @@ todo: diff particles for key being used up - burst key color particles?
 
 add wasd controls
 	maybe these should be reversed too
+
+easter eggs from prev games in levels - space tether, mech gun, crystal hopper
 
 space force 3 - 3d fps, slime like fox heads that hop around
