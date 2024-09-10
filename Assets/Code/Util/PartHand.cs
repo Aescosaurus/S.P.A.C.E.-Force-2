@@ -7,6 +7,22 @@ public class PartHand
 	:
 	MonoBehaviour
 {
+	public enum PartType
+	{
+		Explode = 0,
+		KeyExplode,
+		ChickenExplode,
+		AsteroidExplode,
+		CrystalSpikeExplode
+	}
+
+	[System.Serializable]
+	class ParticlePreset
+	{
+		[SerializeField] public GameObject prefab = null;
+		[SerializeField] public RangeI amount = new RangeI( 25,35 );
+	}
+
 	void Start()
 	{
 		self = this;
@@ -18,17 +34,18 @@ public class PartHand
 		return( self );
 	}
 
-	public void SpawnParts( Vector2 pos )
+	public void SpawnParts( Vector2 pos,PartType type,RangeI amountOverride = null )
 	{
-		var curPartObj = GameObject.Instantiate( partPrefab,pos,Quaternion.identity );
+		var preset = partPresets[( int )type];
+		var curPartObj = GameObject.Instantiate( preset.prefab,pos,Quaternion.identity );
 
 		var partSys = curPartObj.GetComponent<ParticleSystem>();
-		partSys.Emit( amount.Rand() );
+		var nParts = ( amountOverride != null ? amountOverride.Rand() : preset.amount.Rand() );
+		partSys.Emit( nParts );
 		Destroy( curPartObj,partSys.main.duration );
 	}
 
 	static PartHand self = null;
 
-	[SerializeField] GameObject partPrefab = null;
-	[SerializeField] RangeI amount = new RangeI( 25,35 );
+	[SerializeField] List<ParticlePreset> partPresets = new List<ParticlePreset>();
 }

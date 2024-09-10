@@ -16,7 +16,7 @@ public class PlayerHeldItems
 		if( keys.Count > 0 )
 		{
 			var usedKey = keys[Random.Range( 0,keys.Count )];
-			PartHand.Get().SpawnParts( usedKey.transform.position );
+			PartHand.Get().SpawnParts( usedKey.transform.position,PartHand.PartType.KeyExplode );
 			Destroy( usedKey );
 			keys.Remove( usedKey );
 			return( true );

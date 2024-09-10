@@ -37,7 +37,7 @@ public class AsteroidSplit
 		}
 	}
 
-	void BreakOpen( GameObject hitObj )
+	public void BreakOpen( GameObject hitObj )
 	{
 		// make sure children don't collide with self
 		GetComponent<Collider2D>().enabled = false;
@@ -66,8 +66,8 @@ public class AsteroidSplit
 				child.GetComponent<Rigidbody2D>().AddForce( totalVel * childVelMult,ForceMode2D.Impulse );
 			}
 		}
-
-		// todo: particles!
+		
+		PartHand.Get().SpawnParts( transform.position,PartHand.PartType.AsteroidExplode,nDestroyParticles );
 
 		Destroy( gameObject );
 	}
@@ -80,4 +80,6 @@ public class AsteroidSplit
 	[SerializeField] GameObject childAsteroidPrefab = null;
 	[SerializeField] int nChildSpawns = 2;
 	[SerializeField] float childVelMult = 15.0f;
+
+	[SerializeField] RangeI nDestroyParticles = new RangeI( 25,35 );
 }

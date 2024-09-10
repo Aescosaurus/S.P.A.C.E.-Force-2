@@ -13,6 +13,7 @@ public class VelocityWall
 			if( coll.gameObject.GetComponent<Rigidbody2D>().velocity.sqrMagnitude >
 				Mathf.Pow( breakForce,2 ) )
 			{
+				PartHand.Get().SpawnParts( transform.position,PartHand.PartType.Explode );
 				Destroy( gameObject );
 			}
 		}

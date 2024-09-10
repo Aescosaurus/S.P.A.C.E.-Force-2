@@ -59,7 +59,13 @@ public class CrystalSpike
 		// todo: spawn blue explosion particles here
 
 		if( coll.gameObject.tag == "Player" ) coll.gameObject.GetComponent<HealthBar>().Hurt( 1.0f );
-		if( ( hitLayer & ( 1 << coll.gameObject.layer ) ) != 0 ) Destroy( gameObject );
+
+		if( ( hitLayer & ( 1 << coll.gameObject.layer ) ) != 0 )
+		{
+			coll.gameObject.GetComponent<AsteroidSplit>()?.BreakOpen( gameObject );
+			PartHand.Get().SpawnParts( transform.position,PartHand.PartType.CrystalSpikeExplode );
+			Destroy( gameObject );
+		}
 	}
 
 	ParticleSystem warningParts;

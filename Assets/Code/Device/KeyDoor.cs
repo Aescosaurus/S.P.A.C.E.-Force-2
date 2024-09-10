@@ -12,7 +12,7 @@ public class KeyDoor
 		{
 			if( coll.GetComponent<PlayerHeldItems>().TryConsumeKey() )
 			{
-				PartHand.Get().SpawnParts( transform.position );
+				PartHand.Get().SpawnParts( transform.position,PartHand.PartType.Explode );
 				Destroy( gameObject );
 			}
 		}

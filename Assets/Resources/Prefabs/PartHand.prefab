@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -43,8 +44,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 546e649b9cd33f340a1a6bf535787152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  partPrefab: {fileID: 5216362707524809597, guid: c24637a84d36f46408bd2069518144aa,
-    type: 3}
-  amount:
-    min: 25
-    max: 35
+  partPresets:
+  - prefab: {fileID: 5216362707524809597, guid: c24637a84d36f46408bd2069518144aa,
+      type: 3}
+    amount:
+      min: 25
+      max: 35
+  - prefab: {fileID: 5216362707524809597, guid: 540a92b42cad9a5478eaeb1c3165f74d,
+      type: 3}
+    amount:
+      min: 25
+      max: 35
+  - prefab: {fileID: 5216362707524809597, guid: 6c8a44e3dd1537040beecfe723980a8b,
+      type: 3}
+    amount:
+      min: 18
+      max: 28
+  - prefab: {fileID: 5216362707524809597, guid: c964821eb61672f47a59da207c88f26f,
+      type: 3}
+    amount:
+      min: 25
+      max: 35
+  - prefab: {fileID: 5216362707524809597, guid: 867b4fef39797d34b907b0ec9229264b,
+      type: 3}
+    amount:
+      min: 18
+      max: 26

@@ -38,7 +38,7 @@ public class HealthBar
 		curHP -= damage;
 		if( curHP <= 0.0f )
 		{
-			PartHand.Get().SpawnParts( transform.position );
+			PartHand.Get().SpawnParts( transform.position,explodePartType );
 			if( tag == "Player" ) StartCoroutine( DestroyPlayer() );
 			else Destroy( gameObject );
 		}
@@ -100,4 +100,6 @@ public class HealthBar
 	[SerializeField] float barOffset = 0.6f;
 
 	[SerializeField] Vector2 barScale = new Vector2( 1.0f,1.0f );
+
+	[SerializeField] PartHand.PartType explodePartType = PartHand.PartType.Explode;
 }

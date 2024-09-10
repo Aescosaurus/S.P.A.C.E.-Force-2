@@ -9734,7 +9734,7 @@ MonoBehaviour:
     maxTime: 0.1
   launchForce: 40
   warningDur:
-    maxTime: 0
+    maxTime: 0.02
 --- !u!1 &4665805125814356170
 GameObject:
   m_ObjectHideFlags: 0

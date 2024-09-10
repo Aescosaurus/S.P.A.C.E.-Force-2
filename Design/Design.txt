@@ -61,12 +61,12 @@ level ideas
 		spinning wheel with turrets attached to it
 		pew pew laser beams from space tether
 
-todo: diff particles for key being used up - burst key color particles?
+--todo: diff particles for key being used up - burst key color particles?
 	particles when bullet hits wall
 		they shoot out in narrow cone at opposite angle of bullet
-	breakable wall destroy particles
-		maybe some particles when you boop against but can't break?
-	blue-green explodey particles when crystal spikes are destroyed
+	--breakable wall destroy particles
+	--blue-green explodey particles when crystal spikes are destroyed
+	--asteroid explode particles
 
 add wasd controls
 	maybe these should be reversed too
