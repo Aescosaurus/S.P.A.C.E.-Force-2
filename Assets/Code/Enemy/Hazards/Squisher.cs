@@ -20,6 +20,8 @@ public class Squisher
 		hitbox = squisherTop.GetComponent<BoxCollider2D>();
 		hitbox.isTrigger = false;
 
+		yeeter = GetComponentInChildren<SquisherYeeter>();
+
 		startPos = squisherTop.localPosition;
 		startPos.y = basePos;
 		endPos = squisherTop.localPosition;
@@ -38,6 +40,7 @@ public class Squisher
 					state = SquishState.Extending;
 					// squisherBody.AddForce( transform.up * extendForce,ForceMode2D.Impulse );
 					hitbox.isTrigger = true;
+					yeeter.ToggleCanYeet( true );
 				}
 				break;
 			case SquishState.Extending:
@@ -53,6 +56,7 @@ public class Squisher
 					squisherTop.localPosition = endPos;
 					
 					hitbox.isTrigger = false;
+					yeeter.ToggleCanYeet( false );
 
 					state = SquishState.ExtendPause;
 				}
@@ -67,6 +71,8 @@ public class Squisher
 				{
 					extendStay.Reset();
 					// squisherBody.AddForce( -transform.up * returnForce,ForceMode2D.Impulse );
+
+					hitbox.enabled = false;
 
 					state = SquishState.Returning;
 				}
@@ -83,6 +89,8 @@ public class Squisher
 
 					squisherTop.localPosition = startPos;
 
+					hitbox.enabled = true;
+
 					state = SquishState.WaitForExtend;
 				}
 				else
@@ -97,6 +105,7 @@ public class Squisher
 	Transform squisherTop;
 	// Rigidbody2D squisherBody;
 	BoxCollider2D hitbox;
+	SquisherYeeter yeeter;
 
 	const float basePos = 1.0f / 16.0f;
 	const float maxExtend = 1.0f - ( 1.0f / 16.0f );
