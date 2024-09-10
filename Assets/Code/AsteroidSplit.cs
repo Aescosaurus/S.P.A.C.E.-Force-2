@@ -9,6 +9,8 @@ public class AsteroidSplit
 {
 	void Start()
 	{
+		transform.Rotate( 0.0f,0.0f,Random.Range( 0.0f,360.0f ) );
+
 		var nChildren = transform.childCount;
 		for( int i = 1; i < nChildren; ++i ) spawnSpots.Add( transform.GetChild( i ) );
 		
@@ -49,8 +51,8 @@ public class AsteroidSplit
 			for( int i = 0; i < Mathf.Min( nChildSpawns,spawnSpots.Count ); ++i )
 			{
 				var spawnPos = spawnSpots[randSpots[i]].position;
-				var child = Instantiate( childAsteroidPrefab,spawnPos,
-					Quaternion.Euler( 0.0f,0.0f,Random.Range( 0.0f,360.0f ) ) );
+				var child = Instantiate( childAsteroidPrefab,spawnPos,Quaternion.identity );
+					// Quaternion.Euler( 0.0f,0.0f,Random.Range( 0.0f,360.0f ) ) );
 
 				// yeet children away with average of diff vectors
 				var velDiffs = new List<Vector2>();
