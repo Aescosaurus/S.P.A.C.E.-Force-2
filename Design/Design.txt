@@ -66,6 +66,7 @@ todo: diff particles for key being used up - burst key color particles?
 		they shoot out in narrow cone at opposite angle of bullet
 	breakable wall destroy particles
 		maybe some particles when you boop against but can't break?
+	blue-green explodey particles when crystal spikes are destroyed
 
 add wasd controls
 	maybe these should be reversed too
