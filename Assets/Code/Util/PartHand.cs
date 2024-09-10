@@ -13,7 +13,8 @@ public class PartHand
 		KeyExplode,
 		ChickenExplode,
 		AsteroidExplode,
-		CrystalSpikeExplode
+		CrystalSpikeExplode,
+		BulletHit
 	}
 
 	[System.Serializable]
@@ -36,8 +37,17 @@ public class PartHand
 
 	public void SpawnParts( Vector2 pos,PartType type,RangeI amountOverride = null )
 	{
+		SpawnPartsDirectional( pos,Vector2.zero,type,amountOverride );
+	}
+
+	public void SpawnPartsDirectional( Vector2 pos,Vector2 dir,PartType type,RangeI amountOverride = null )
+	{
 		var preset = partPresets[( int )type];
-		var curPartObj = GameObject.Instantiate( preset.prefab,pos,Quaternion.identity );
+		
+		var curPartObj = GameObject.Instantiate( preset.prefab,pos,
+			dir == Vector2.zero
+			? Quaternion.identity
+			: Quaternion.Euler( 0.0f,0.0f,Mathf.Atan2( dir.y,dir.x ) * Mathf.Rad2Deg - 90.0f ) );
 
 		var partSys = curPartObj.GetComponent<ParticleSystem>();
 		var nParts = ( amountOverride != null ? amountOverride.Rand() : preset.amount.Rand() );

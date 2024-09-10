@@ -61,9 +61,10 @@ public class PlayerWeapon
 		var bull = Instantiate( bulletPrefab,
 			pos,Quaternion.identity );
 		bull.transform.rotation = CalcRot( moveDir );
-		var bullBody = bull.GetComponent<Rigidbody2D>();
-		bullBody.AddForce( moveDir * bulletSpeed,
-			ForceMode2D.Impulse );
+		// var bullBody = bull.GetComponent<Rigidbody2D>();
+		// bullBody.AddForce( moveDir * bulletSpeed,
+		// 	ForceMode2D.Impulse );
+		bull.GetComponent<EmancipatorBullet>().Fire( moveDir * bulletSpeed );
 
 		Destroy( bull,2.0f );
 	}

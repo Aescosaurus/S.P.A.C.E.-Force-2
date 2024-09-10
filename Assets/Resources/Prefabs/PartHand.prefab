@@ -70,3 +70,8 @@ MonoBehaviour:
     amount:
       min: 18
       max: 26
+  - prefab: {fileID: 5216362707524809597, guid: da150bf2fde4a714c9a6afe0e1b691c0,
+      type: 3}
+    amount:
+      min: 4
+      max: 7
