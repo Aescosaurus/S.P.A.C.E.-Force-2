@@ -72,7 +72,7 @@ public class Squisher
 					extendStay.Reset();
 					// squisherBody.AddForce( -transform.up * returnForce,ForceMode2D.Impulse );
 
-					hitbox.enabled = false;
+					// hitbox.enabled = false;
 
 					state = SquishState.Returning;
 				}
@@ -89,7 +89,7 @@ public class Squisher
 
 					squisherTop.localPosition = startPos;
 
-					hitbox.enabled = true;
+					// hitbox.enabled = true;
 
 					state = SquishState.WaitForExtend;
 				}

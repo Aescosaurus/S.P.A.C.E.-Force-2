@@ -1,20 +1,18 @@
 Color palette: FullOfJoy20 Palette https://lospec.com/palette-list/fullofjoy20
 
-weapons
-	regular fast fire rate pew pew style gun
-	railgun - slow fire rate, huge knockback, spins player a bit after shooting? piercing?
-	jackhammer - short range, high dmg, high knockback
+/weapons
+/	regular fast fire rate pew pew style gun
+/	railgun - slow fire rate, huge knockback, spins player a bit after shooting? piercing?
+/	jackhammer - short range, high dmg, high knockback
 
-abilities - spacebar/right click to activate
-	rear shield - blocks damage from behind for a limited time
-	--dash a short distance ignoring enemies & damage
-		--show in tutorial with flames in the way so you have to dash over them
-	lock momentum for a short time/while held (no knockback from weps)
-		cooldown as mana bar? like ability takes mana & regen represents cooldown
+/abilities - spacebar/right click to activate
+/	rear shield - blocks damage from behind for a limited time
+/	--dash a short distance ignoring enemies & damage
+/		--show in tutorial with flames in the way so you have to dash over them
+/	lock momentum for a short time/while held (no knockback from weps)
+/		cooldown as mana bar? like ability takes mana & regen represents cooldown
 
 boss ideas
-	giant boss hp bar on top of screen?
-		--or just a way to make boss hp bars bigger in settings
 	fox snake with multiple segments
 	long fox ship with wings & 2 foxes inside that moves horizontally & shoots bullets up & down
 	2d fox face that charges & has directional attacks
@@ -24,19 +22,16 @@ boss ideas
 different backgrounds & deco for each area - stars, nebulas, etc
 
 timed hazards/traps
-	--flame pillars using particles
-	--squishers like minecraft pistons that turn on/off periodically
 	something like crystal hopper jumpers where if you get close enough they dash towards you & explode
 		little alien squid things
 		these for asteroid level
 
 
 
-upgrades: menu in between levels to equip diff abilities & weps
-	weps & abilities go into their own slots inside player for easier management
-	different ship types with different sprites, hitboxes, weight (affects knockback) & gun spots
+/upgrades: menu in between levels to equip diff abilities & weps
+/	weps & abilities go into their own slots inside player for easier management
+/	different ship types with different sprites, hitboxes, weight (affects knockback) & gun spots
 
-todo: add abilities, aim for mvp
 levels teach you how to deal with boss - area 1 bullet dodging, area 2 hazards for sword boss
 	start of level 2 has flame barrier to make sure you have an ability that will let you beat the level
 	small fox ship with giant sword
@@ -48,12 +43,6 @@ level ideas
 		springs placed on walls that zoom you in a certain direction
 			maybe: timed repulsors that go 3 2 1 boing? & repulse you based on angle (just use diff vec)
 		those zoom floors from level 1
-		--walls that take a certain amount of speed to break
-		spiky crystals in crystal area that shoot out as soon as you cross their line of sight
-			shoot line of particles showing where they're gonna go a split second before firing?
-			room filled with space chickens & spiky crystals
-				maybe chicken at start activates when you get near it, & triggers spiky crystal
-				boost tile that just sends you into a bunch of spiky crystals
 		level 2 boss ideas
 			shoots warning particles then dashes in your direction a few times
 			incorporate flamethrowers somehow

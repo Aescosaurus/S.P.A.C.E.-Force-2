@@ -9731,8 +9731,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycastInterval:
-    maxTime: 0.1
-  launchForce: 40
+    maxTime: 0.01
+  launchForce: 30
   warningDur:
     maxTime: 0.02
 --- !u!1 &4665805125814356170

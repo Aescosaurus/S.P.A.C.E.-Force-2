@@ -17,7 +17,7 @@ public class CrystalSpike
 
 		raycastInterval.Randomize();
 
-		hitLayer = LayerMask.GetMask( "Default","Emancipator" );
+		hitLayer = LayerMask.GetMask( "Default","Emancipator","SpaceFox" );
 	}
 
 	void Update()
@@ -56,8 +56,6 @@ public class CrystalSpike
 
 	void OnCollisionEnter2D( Collision2D coll )
 	{
-		// todo: spawn blue explosion particles here
-
 		if( coll.gameObject.tag == "Player" ) coll.gameObject.GetComponent<HealthBar>().Hurt( 1.0f );
 
 		if( ( hitLayer & ( 1 << coll.gameObject.layer ) ) != 0 )
