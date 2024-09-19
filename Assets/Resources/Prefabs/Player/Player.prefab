@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 55e7e99ff8fef54478de552ce8a8f390, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71353449fbb73724ea5522a55155ac65, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -263,6 +263,7 @@ MonoBehaviour:
   maxHP: 1
   barOffset: 0.6
   barScale: {x: 1, y: 1}
+  explodePartType: 6
 --- !u!114 &2985212465220775227
 MonoBehaviour:
   m_ObjectHideFlags: 0

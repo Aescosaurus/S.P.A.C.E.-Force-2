@@ -14,7 +14,8 @@ public class PartHand
 		ChickenExplode,
 		AsteroidExplode,
 		CrystalSpikeExplode,
-		BulletHit
+		BulletHit,
+		PlayerExplode
 	}
 
 	[System.Serializable]
